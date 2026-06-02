@@ -90,6 +90,7 @@ button:hover { opacity: 0.85; }
 </div>
 
 <script>
+var WORKER_URL = "https://solitary-grass-a3a8.alsydhsdrh.workers.dev/";
 var INSTANCES = [
   "https://yewtu.be",
   "https://invidious.nerdvpn.de",
@@ -109,7 +110,7 @@ function doSearch() {
 
   document.getElementById("status").innerHTML = "⏳ جاري الفتح...";
   document.getElementById("frame-box").style.display = "block";
-
+  
   var instance = INSTANCES[currentInstance];
   var url = instance + "/search?q=" + encodeURIComponent(q);
 
